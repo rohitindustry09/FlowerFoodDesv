@@ -1,0 +1,92 @@
+/*navabar search style*/
+.navbar-search-outer-parent {
+  display: flex;
+  justify-content: center;
+  padding: .5rem;
+  transition: all 1s;
+}
+.navbar-search-inner-parent {
+  background: transparent;
+  position: relative;
+  z-index: 102;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 80%;
+  padding: 1rem;
+}
+
+.navbar-search-inner-parent i {
+  font-weight: 500;
+}
+.navbar-search-inner-parent input {
+  z-index: 200 !important;
+  font-weight: 500;
+  border: none;
+  background: #fff;
+  padding: .5rem;
+  color: #242424;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.5s;
+}
+
+.navbar-search-inner-parent input:hover {
+  box-shadow: 1px 1px 10px #fff;
+}
+
+/*navbar navigation flower or food*/ 
+.navigation-tab-parent {
+  display: flex;
+  justify-content: space-evenly;
+  background: ;
+  padding: .5rem;
+  gap: .5rem;
+}
+.navigation-tab-parent .navigation-tabs {
+  flex: 1;
+}
+.navigation-tab-parent .navigation-tabs button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  
+}
+.navigation-tab-parent .navigation-tabs .icon {
+  font-size: 2rem;
+  /*transform: rotate(-45deg);*/
+}
+/*hamburger-parent*/
+.hamburger-parent-outer {
+  position: fixed;
+  right: 5%;
+  top: 2%;
+  z-index: 101;
+  background: #fff;
+  box-shadow: 2px 2px 4px black;
+  padding: 5px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 1s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.hamburger-parent {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+  color: #1a1a1a;
+  justify-content: center;
+  align-items: center;
+  transform: translate(22px, 2px);
+  transition: all 0.5s;
+}
