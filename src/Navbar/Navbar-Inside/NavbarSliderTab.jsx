@@ -8,7 +8,7 @@ export default function NavbarSliderTab({ hambugerClick, transformTriggered }) {
   }}>
     <div className="slider-menu" style={{
       right: transformTriggered ? '0' : '-100vw',
-      boxShadow: transformTriggered ? '-20px 20px 0 #cecece' : '-100px -10px 0 white'
+      boxShadow: transformTriggered ? '-20px 20px 0 var(--elementsFontsColor)' : '-100px -10px 0 var(----elementsFontsColor)'
     }}>
       <h2>Where <span className="toGo">toGo?</span></h2>
       <NavbarOptions optionTitle="Home" />

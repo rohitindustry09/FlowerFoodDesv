@@ -15,6 +15,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  transition: background-color 0.3s ease;
+  background-color: var(--elementsFontsColor);
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
