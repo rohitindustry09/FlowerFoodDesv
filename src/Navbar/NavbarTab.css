@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding: .5rem;
-  transition: all 1s;
+  transition: all .5s;
 }
 .navbar-search-inner-parent {
   background: transparent;
@@ -89,4 +89,8 @@
   align-items: center;
   transform: translate(22px, 2px);
   transition: all 0.5s;
+}
+
+.no-click {
+  pointer-events: none;
 }

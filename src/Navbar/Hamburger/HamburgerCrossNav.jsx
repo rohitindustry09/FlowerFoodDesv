@@ -1,6 +1,17 @@
+import { useState, useEffect } from 'react'
+
 export default function HamburgerCrossNav({ handleHamburger, hambugerClick, transformTriggered, hamburgerTransTrigg }) {
+    const [defineNoClick, setDefineNoClick] = useState("");
+    useEffect(()=>{
+      if (hambugerClick) {
+        setDefineNoClick("no-click");
+        setTimeout(function() {
+          setDefineNoClick("");
+        }, 1500);
+      }
+    }, [hambugerClick])
   return (
-    <div className="hamburger-parent-outer" onClick={handleHamburger} 
+    <div className={`hamburger-parent-outer ${defineNoClick}`} onClick={handleHamburger} 
       style={{
         boxShadow: hambugerClick ? '2px -2px 5px black' : '2px 2px 5px black',
         right: transformTriggered ? '86%' : '5%'

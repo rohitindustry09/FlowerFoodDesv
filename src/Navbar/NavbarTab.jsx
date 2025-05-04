@@ -31,7 +31,7 @@ export default function NavbarTab() {
      
      setTimeout(function() {
        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
-     }, 1000);
+     }, 1);
      
     }
     else if (foodClick) {
@@ -41,7 +41,7 @@ export default function NavbarTab() {
     
     setTimeout(function() {
        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', color);
-     }, 1000);
+     }, 1);
   
     }
     

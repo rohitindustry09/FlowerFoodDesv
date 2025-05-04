@@ -1,29 +1,26 @@
 import imageLotus2nd from '/Flowers/lotus_2nd.jpg'
 import VisitSalesTab from './VisitSalesTab.jsx';
-
+import ProductCards from '../Product-Compo/ProductCards.jsx'
 import './HomeTab.css'
 export default function HomeTab() {
   return (
     <>
      <div className="">
-       <h2 className="headings"> Most Loved </h2>
-       <div className="image-outer-holder">
-         <div className="image-outer">
-           <img src={imageLotus2nd} />
-         </div>
-         <div className="image-outer">
-           <img src={imageLotus2nd} />
-         </div>
-         <div className="image-outer">
-           <img src={imageLotus2nd} />
-         </div>
-         <div className="image-outer">
-           <img src={imageLotus2nd} />
-         </div>
-         <div className="image-outer">
-           <img src={imageLotus2nd} />
-         </div>
-       </div>
+        <h2 className="headings"> Most Loved </h2>
+        <div className="image-outer-holder">
+          <div className="scroll-track">
+            {[...Array(2)].flatMap(() =>
+              [1, 2, 3,].map((_, i) => (
+                <div className="image-outer" key={`img-${i}-${Math.random()}`}>
+                  <img src={imageLotus2nd} />
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+       
+       <h2 className="headings"> Products Live </h2>
+       <ProductCards />
        
        <h2 className="headings"> Demanded Sales Live </h2>
        <VisitSalesTab setImage={imageLotus2nd} setDiscount="45"/>
