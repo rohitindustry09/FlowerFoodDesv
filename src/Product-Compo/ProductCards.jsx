@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from "react";
 import imageLotus2nd from '/Flowers/lotus_2nd.jpg'
 import imageLotus from '/Flowers/lotus.jpg'
 import "./ProductCards.css";
+import { Link } from 'react-router-dom'
 
 const products = Array.from({ length: 7 }, (_, i) => ({
   id: i + 1,
@@ -29,8 +30,10 @@ const [reactOnMeasure, setReactOnMeasure] = useState(false)
     } 
   }, [])
   return (
+
     <div className="cards-container">
       {products.map((product) => (
+      <Link to={`show/${product.id}`}>
         <div className="card" key={product.id}>
           <div className="main-info">
             <div className="discount-badge">
@@ -59,6 +62,7 @@ const [reactOnMeasure, setReactOnMeasure] = useState(false)
             ))}
           </div>
         </div>
+      </Link>
       ))}
     </div>
   );

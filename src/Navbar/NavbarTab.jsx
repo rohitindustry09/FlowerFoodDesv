@@ -4,6 +4,7 @@ import NavbarSearchBarTab from './NavbarTop-Compo/NavbarSearchBarTab.jsx';
 import NavbarSliderTab from './Navbar-Inside/NavbarSliderTab.jsx';
 import NavbarChangeNavigationTab from './Navbar-Navigation/NavbarChangeNavigationTab.jsx';
 import HamburgerCrossNav from './Hamburger/HamburgerCrossNav.jsx'
+import { useLocation } from 'react-router-dom'
 
 export default function NavbarTab() {
   const [flowerClick, setFlowerClick] = useState(true)
@@ -11,7 +12,9 @@ export default function NavbarTab() {
   const [hambugerClick, setHambugerClick] = useState(false);
   const [transformTriggered, setTransformTriggered] = useState(false);
   const [hamburgerTransTrigg, setHamburgerTransTrigg] = useState(false);
-
+  /*hide mav navigation*/ 
+  const location = useLocation();
+  const hideNavigatiomBar = location.pathname.startsWith('/show') || location.pathname.startsWith('/details');
   
   const handleFlowerClick = (element)=> {
     setFlowerClick(true)
@@ -68,12 +71,15 @@ export default function NavbarTab() {
      <NavbarSearchBarTab flowerClick={flowerClick}/>
   
       {/*navigation flower or food*/}
-      <NavbarChangeNavigationTab 
-        handleFlowerMethod={handleFlowerClick}
-        handleFoodMethod={handleFoodsClick}
-        flowerClick={flowerClick} 
-        foodsClick={foodClick}
-      />
+      {
+        !hideNavigatiomBar &&
+        <NavbarChangeNavigationTab 
+          handleFlowerMethod={handleFlowerClick}
+          handleFoodMethod={handleFoodsClick}
+          flowerClick={flowerClick} 
+          foodsClick={foodClick}
+        />
+      }
   
      <HamburgerCrossNav 
        handleHamburger={handleHamburger}

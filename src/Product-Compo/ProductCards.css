@@ -83,10 +83,16 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+.stair-images .every-img-parent:hover {
+  z-index: 2;
+}
+
 .stair-images .starting-point {
   left: 40px !important;
   top: 30px !important;
 }
+
 
 .extra-image {
   height: 100%;

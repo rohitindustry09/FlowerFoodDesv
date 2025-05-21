@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavbarTab from './Navbar/NavbarTab.jsx';
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <NavbarTab />
-      <HomeTab />
+      <Outlet />
     </>
   )
 }
