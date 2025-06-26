@@ -52,9 +52,11 @@
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 100%
+    transparent 0%,
+    transparent 25%,
+    #000 90%,
+    transparent 75%,
+    #747474 100%
   );
   transform: skewX(-20deg);
   animation: flare 2s linear infinite;
