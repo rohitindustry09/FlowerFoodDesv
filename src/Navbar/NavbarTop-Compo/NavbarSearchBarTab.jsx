@@ -7,7 +7,7 @@ export default function NavbarSearchBarTab({ selectedFilter }) {
         className="navbar-floating-bg"
         style={{
           backgroundImage: `url(${imageBg})`,
-          filter: selectedFilter?.imageFilter || 'hue-rotate(330deg) saturate(1.5) brightness(1.1)',
+          filter: selectedFilter?.imageFilter || 'grayscale(1) brightness(4) contrast(1.2)',
           transition: 'all cubic-bezier(.01,.59,.48,.98) .5s'
         }}
       ></div>
